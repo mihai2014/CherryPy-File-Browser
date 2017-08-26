@@ -1,0 +1,12 @@
+File browser based on CherryPy and Jinja2 template
+
+First install:
+
+pip install cherrypy
+pip install Jinja2
+
+then run:
+
+python file_browser.py
+
+Change port from file_browser.conf and stop with ctrl+z.

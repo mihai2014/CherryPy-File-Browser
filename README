@@ -10,3 +10,5 @@ then run:
 python file_browser.py
 
 Change port from file_browser.conf and stop with ctrl+z.
+
+It work on python 2 or 3.

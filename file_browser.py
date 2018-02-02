@@ -6,12 +6,14 @@ import signal
 import os,sys
 import platform
 
-def signal_handler(signal, frame):
-        print('You pressed Ctrl+Z!')
-	#os.popen("fuser -k 8080/tcp")
-        sys.exit(0)
+if os.name != 'nt':
 
-signal.signal(signal.SIGTSTP, signal_handler)
+    def signal_handler(signal, frame):
+            print('You pressed Ctrl+Z!')
+            sys.exit(0)
+
+    signal.signal(signal.SIGTSTP, signal_handler)
+
 
 def order(dir):
     dirs = []
